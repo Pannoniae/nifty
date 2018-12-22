@@ -1,0 +1,11 @@
+{
+  "id": "nifty",
+  "name": "Nifty",
+  "version": "1.0.0",
+  "side": "universal",
+  "initializer": "net.panno.nifty.NeatMod",
+  "mixins": {
+    "client": "modid.client.json",
+    "common": "modid.common.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.panno.nifty.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "EntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
