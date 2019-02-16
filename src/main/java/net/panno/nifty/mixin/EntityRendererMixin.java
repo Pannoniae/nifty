@@ -20,7 +20,7 @@ abstract class EntityRendererMixin<T extends Entity> {
 
     @Shadow @Final protected EntityRenderDispatcher renderManager;
 
-    @Inject(method = "method_3939", at = @At(value = "RETURN"))
+    @Inject(method = "postRender", at = @At(value = "RETURN"))
     public void renderEntityHealth(Entity entity, double double_1, double double_2, double double_3, float inFloat, float inFloat2, CallbackInfo ci) {
 
         if (entity instanceof LivingEntity) {
@@ -39,7 +39,7 @@ abstract class EntityRendererMixin<T extends Entity> {
                 float float_1 = this.renderManager.field_4679;
                 float float_2 = this.renderManager.field_4677;
                 boolean boolean_2 = this.renderManager.settings.field_1850 == 2;
-                float float_3 = entity.height + 0.5F - (boolean_1 ? 0.25F : 0.0F);
+                float float_3 = entity.getHeight() + 0.5F - (boolean_1 ? 0.25F : 0.0F);
                 int int_2 = -10;
                 GameRenderer.method_3179(this.getFontRenderer(), healthString, (float) double_1, (float) double_2 + float_3, (float) double_3, int_2, float_1, float_2, boolean_2, boolean_1);
             }
